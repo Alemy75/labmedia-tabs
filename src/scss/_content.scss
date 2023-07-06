@@ -9,23 +9,31 @@
         align-items: flex-start;
         text-align: left;
     }
-    &-tabs {
-        width: 232px;
-        & div {
-            padding: 10px;
-            display: block;
-            border: 1px solid #cccccc50;
-            cursor: pointer;
-            line-height: 14px;
-            &:not(:last-child) {
-                border-bottom: none;
-            }
-            &:hover {
-                background-color: #cccccc20;
-            }
+    &__button {
+        margin: 56px 0;
+    }
+    &__lines {
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+.tabs {
+    width: 232px;
+    & div {
+        padding: 10px;
+        display: block;
+        border: 1px solid #cccccc50;
+        cursor: pointer;
+        line-height: 14px;
+        &:not(:last-child) {
+            border-bottom: none;
+        }
+        &:hover {
+            background-color: #cccccc20;
         }
     }
-    &-modal {
+    &-content {
         display: block;
         width: 100%;
         border: 1px solid #cccccc50;
@@ -40,15 +48,7 @@
             }
         }
     }
-    &__modal {
+    &__content {
         margin-left: 10px;
-    }
-
-    &__button {
-        margin-top: 56px;
-    }
-    &__lines {
-        position: absolute;
-        bottom: 0;
     }
 }

@@ -1,4 +1,4 @@
-class Modal {
+class Tabs {
     constructor(tabs) {
         this.state = {
             tabs: tabs || [],
@@ -16,12 +16,12 @@ class Modal {
     }
 
     renderTabItems() {
-        const componentElement = document.getElementById('modal-items')
+        const componentElement = document.getElementById('tabs-content')
         const html = this.state.tabs
             .find(item => item.id === this.state.currentTab)
             .items.map(
                 item => `
-                <div class="content-modal__item">
+                <div class="tabs-content__item">
                 <h2>
                     <span class="marker">${item.id}</span>${item.title}
                 </h2>
@@ -167,7 +167,7 @@ const tabs = [
     },
 ]
 
-const myComponent = new Modal(tabs)
+const myTabs = new Tabs(tabs)
 
-myComponent.renderTabItems()
-myComponent.renderTabs()
+myTabs.renderTabItems()
+myTabs.renderTabs()
