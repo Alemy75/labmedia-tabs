@@ -1,0 +1,54 @@
+.content {
+    position: relative;
+    width: 100%;
+    min-height: calc(100vh - 65px);
+    text-align: center;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: left;
+    }
+    &-tabs {
+        width: 232px;
+        & div {
+            padding: 10px;
+            display: block;
+            border: 1px solid #cccccc50;
+            cursor: pointer;
+            line-height: 14px;
+            &:not(:last-child) {
+                border-bottom: none;
+            }
+            &:hover {
+                background-color: #cccccc20;
+            }
+        }
+    }
+    &-modal {
+        display: block;
+        width: 100%;
+        border: 1px solid #cccccc50;
+        &__item {
+            padding: 20px 22px;
+            & ul {
+                list-style: none;
+                padding: 0;
+            }
+            &:not(:last-child) {
+                padding-bottom: 0;
+            }
+        }
+    }
+    &__modal {
+        margin-left: 10px;
+    }
+
+    &__button {
+        margin-top: 56px;
+    }
+    &__lines {
+        position: absolute;
+        bottom: 0;
+    }
+}
